@@ -1,1 +1,1 @@
-# This is a simple portfolio made using HTML, CSS, BOOTSTRAP, JAVASCRIPT AND JQUERY
+# This is a simple portfolio made using HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY AND PHP
