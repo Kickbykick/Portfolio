@@ -1,23 +1,16 @@
 <?php
-    $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
-    $message = $_POST['message'];
+if(isset( $_POST['name']))
+$name = $_POST['name'];
+if(isset( $_POST['email']))
+$email = $_POST['email'];
+if(isset( $_POST['message']))
+$message = $_POST['message'];
+if(isset( $_POST['subject']))
+$subject = $_POST['subject'];
 
-    $email_from = 'kiibatitoo@gmail.com';
-
-    $email_subject - "This contact form is from my website"
-
-    $email_body = "User Name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                        "User Message: $message.\n";
-
-    $to = "kiibatitoo2@gmail.com";
-
-    $headers = "From: $email_from \r\n";
-
-    $headers .= "Reply-To: $visitor_email \r\n";
-
-    mail($to, $email_subject, $email_body, $headers);
-
-    headers("Location: index.html");
+$content="From: $name \n Email: $email \n Message: $message";
+$recipient = "kiibatitoo@gmail.com";
+$mailheader = "From: $email \r\n";
+mail($recipient, $subject, $content, $mailheader) or die("Error!");
+echo "Email sent!";
 ?>
